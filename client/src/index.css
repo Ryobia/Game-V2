@@ -1,12 +1,41 @@
 * {
   margin: 0;
   padding: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+}
+
+
+
+html {
+  min-height: 100%;
 }
 
 body {
   background-color: lightblue;
 
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  
+}
+
+button {
+  padding: 10px;
+  width: 70px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #e66b07;
+  font-weight: bold;
+  border: none;
+  box-shadow: 2px 2px;
+}
+
+button:hover {
+  opacity: 0.7;
 }
 
 
@@ -15,21 +44,17 @@ body {
   width: 50%;
   display: flex;
   justify-content: center;
-  padding-top: 10%;
+  padding-top: 25%;
+  
   
 }
 
 
 #outer-orbit {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 294px;
-  height: 294px;
-  border: 2px #4A437F dashed;
+  position: absolute; 
+  width: 200px;
+  height: 200px;
   border-radius: 100%;
-  -webkit-animation: spin-right 10s linear infinite;
-  animation: spin-right 10s linear infinite;
 }
 
 /* ---------- Repeating styles for the outer orbiting circles ---------- */
@@ -37,10 +62,46 @@ body {
   position: absolute;
   top: -17px;
   left: 125px;
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   border-radius: 100%;
-  background-color: #00FFCA;
+}
+
+.first {
+  -webkit-animation: spin-right 20s linear infinite;
+  animation: spin-right 20s linear infinite;
+  background-color: black;
+}
+
+.first .outer-orbit-cirlces {
+  background-color: #e66b07;
+}
+
+.second {
+  -webkit-animation: spin-right 15s linear infinite;
+  animation: spin-right 15s linear infinite;
+}
+
+.second .outer-orbit-cirlces {
+  background-color: #177400;
+}
+
+.third {
+  -webkit-animation: spin-right 10s linear infinite;
+  animation: spin-right 10s linear infinite;
+}
+
+.third .outer-orbit-cirlces {
+  background-color: #071de6;
+}
+
+.fourth {
+  -webkit-animation: spin-right 5s linear infinite;
+  animation: spin-right 5s linear infinite;
+}
+
+.fourth .outer-orbit-cirlces {
+  background-color: #360e69;
 }
 
 /* ---------- Animation ---------- */
@@ -53,3 +114,47 @@ body {
     transform: rotate(360deg);
   }
 }
+
+
+
+/* MAIN HOME FIELD THING */
+.field {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.field-content {
+  height: 700px;
+  width: 90%;
+  background-color: rgb(223, 223, 241);
+  position: relative;
+  
+}
+
+.player {
+  position: absolute;
+  left: 0%;
+  bottom: 50%;
+
+}
+
+.baddie {
+  position: absolute;
+  left: 95%;
+  bottom: 50%
+  
+}
+
+.timer {
+  font-size: 30px;
+  padding-left: 50px;
+  padding-top: 20px;
+}
+
+.level {
+  font-size: 30px;
+  padding-right: 70px;
+  padding-top: 20px;
+}
+/* MAIN HOME FIELD ENDS */
